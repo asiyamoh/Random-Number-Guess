@@ -1,5 +1,7 @@
 $(document).ready(handleReady);
 
+let guesses;
+
 function handleReady() {
   // console.log("jquery is loaded!")
 
@@ -7,6 +9,7 @@ function handleReady() {
   $('#submitBtn').on('click', submitGuess)
   $('#restartbtn').on('click', restartGame)
 
+  getGuess()
 }
 
 // function for submit 
@@ -27,6 +30,21 @@ function submitGuess () {
     console.log('Error with post',error);
     alert('Error with post')
   })
+
+
+  let getGuess = () => {
+    $.ajax({
+      method: "GET",
+      url: '/getguess',
+    }).then((response) => {
+      guesses = response
+      render ()
+    }).catch ((error) => {
+      console.log('Error with GET', error)
+      alert('Error with GET')
+    })
+  }
+
 
   let render =() => {
     $('#playerTable').empty();

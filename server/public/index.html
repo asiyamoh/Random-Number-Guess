@@ -12,5 +12,42 @@
 </head>
 <body>
     <h1>YOUR GAME HERE!</h1>
+    <br>
+    <input id="player1" 
+      placeholder="player1 guess"
+      type="text">
+
+      <input id="player2" 
+      placeholder="player2 guess"
+      type="text">
+
+      <button id="submitBtn">Submit</button>
+
+      <span>count: </span>
+
+      <table> 
+        <thead> <!-- represents block of rows that consist of the column labels -->
+          <tr> <!-- represents row of cells in thead -->
+            <th>Player 1</th> <!--represents individual header cell-->
+            <th>Player 2</th>
+          </tr>
+        </thead>
+        <tbody id ="playerTable"> <!-- represents block of rows that consist of a body of data -->
+          <tr> <!-- represents row of cells in tbody -->
+            <td></td> <!-- represents data cell in table -->
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr> 
+            <td> Blue = too low of a guess</td>
+            <td>Red = too high of guess</td>
+            <td>Green = the right guess</td>
+          </tr>
+        </tfoot>
+      </table>
+ <!-- this is where we will add the winner -->
+  <span id="Winner"></span>
+
+<button id="restartbtn"> Restart</button>
 </body>
 </html>

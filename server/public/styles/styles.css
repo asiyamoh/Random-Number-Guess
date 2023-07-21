@@ -1,0 +1,11 @@
+ .tooHigh {
+    background-color: Red;
+}
+
+.tooLow {
+    background-color: blue;
+}
+
+.rightAnswer{
+    background-color: green;
+}
